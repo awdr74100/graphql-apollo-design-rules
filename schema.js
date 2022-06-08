@@ -13,21 +13,16 @@ const typeDefs = gql`
 
   type ManualGroup {
    Image
-   [GroupMembership]
+   [Car]
   }
 
   type AutomaticGroup {
    Image
-   [GroupMembership]
+   [Car]
    [AutomaticGroupFeatures]
   }
 
   type AutomaticGroupFeatures {}
-
-  type GroupMembership {
-    Group
-    Car
-  }
 `;
 
 module.exports = typeDefs;
