@@ -12,30 +12,21 @@ const typeDefs = gql`
   }
 
   type ManualGroup {
-    id: ID!
-    name: String!
-    imageId: ID!
-    bodyHtml: String!
-    memberships: [GroupMembership!]!
+   Image
+   [GroupMembership]
   }
 
   type AutomaticGroup {
-    id: ID!
-    name: String!
-    imageId: ID!
-    bodyHtml: String!
-    memberships: [GroupMembership!]!
-    feature: [AutomaticGroupFeatures!]!
-    applyFeaturesSeparately: Boolean!
+   Image
+   [GroupMembership]
+   [AutomaticGroupFeatures]
   }
 
-  type AutomaticGroupFeatures {
-    column: String!
-  }
+  type AutomaticGroupFeatures {}
 
   type GroupMembership {
-    groupId: ID!
-    carId: ID!
+    Group
+    Car
   }
 `;
 
