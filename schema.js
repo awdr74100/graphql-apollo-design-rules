@@ -11,18 +11,13 @@ const typeDefs = gql`
     make: String!
   }
 
-  type ManualGroup {
+  type Group {
    Image
    [Car]
+   [GroupFeatures]
   }
 
-  type AutomaticGroup {
-   Image
-   [Car]
-   [AutomaticGroupFeatures]
-  }
-
-  type AutomaticGroupFeatures {}
+  type GroupFeatures {}
 `;
 
 module.exports = typeDefs;
