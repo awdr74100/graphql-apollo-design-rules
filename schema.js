@@ -17,7 +17,17 @@ const typeDefs = gql`
     groupUpdate(
       groupId: ID!
       groupInput: GroupInput!
-    )
+    ): GroupUpdatePayload!
+  }
+
+  type GroupUpdatePayload {
+    userErrors: [UserErrors!]!
+    group: Group
+  }
+
+  type UserErrors {
+    message: String!
+    field: [String!]!
   }
 
   input GroupInput {
